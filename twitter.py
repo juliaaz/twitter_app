@@ -1,3 +1,6 @@
+"""
+Module works with Twitter api and creates a map with friends' locations.
+"""
 import requests
 import certifi
 
