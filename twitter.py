@@ -38,7 +38,7 @@ def get_info(bearer_token, screen_name):
   response = requests.get(search_url, headers=search_headers, params=search_params)
   json_response = response.json()
   return json_response
-# print(get_info('AAAAAAAAAAAAAAAAAAAAAG6RMwEAAAAA280ZhavKwLDo0iERLhKFJN11htg%3Dd2g3YwRtkITfpQUlhnTuJZRsVsmrXRMQzh6sMVBjhCpJwDYHh1', '@elonmusk'))
+
 def get_friends_coordinates(json_response):
   """
   Function gets a dictionary and returns a list
@@ -62,7 +62,7 @@ def get_friends_coordinates(json_response):
     except GeocoderUnavailable:
       continue
   return new_friends_list
-# print(get_friends_coordinates(get_info('AAAAAAAAAAAAAAAAAAAAAG6RMwEAAAAA280ZhavKwLDo0iERLhKFJN11htg%3Dd2g3YwRtkITfpQUlhnTuJZRsVsmrXRMQzh6sMVBjhCpJwDYHh1', '@elonmusk')))
+
 def create_map(new_friends_list):
   """
   Function creates an html map with markers as friends' locations.
